@@ -30,7 +30,7 @@ export default function StudentList() {
                 STUDENT DETAILS MANAGEMENT
             </h2>
 
-            <StudentForm onAdd={handleAdd} />
+            <StudentAdd onAdd={handleAdd} />
 
             <h3 className="mt-4 mb-3 text-info">Student List</h3>
 
@@ -38,7 +38,7 @@ export default function StudentList() {
                 <p>No students added yet.</p>
             ) : (
                 students.map((student) => (
-                    <StudentCard
+                    <StudentEdit
                         key={student.id}
                         student={student}
                         onSave={handleSave}
